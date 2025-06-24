@@ -3,15 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nikhil Gokhale | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="profile.jpg" type="image/jpeg">
-  <meta name="description" content="Portfolio of Nikhil Gokhale — Data Scientist & Analyst. Projects, Experience, and Contact.">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Nikhil Gokhale — Data Scientist & AI Developer. Projects, Experience, and Contact.">
+  <meta name="keywords" content="Nikhil Gokhale, Data Science, Portfolio, AI, ML, Data Analyst, Projects, Resume">
+  <meta name="author" content="Nikhil Gokhale">
   <meta property="og:title" content="Nikhil Gokhale | Data Scientist Portfolio">
-  <meta property="og:description" content="Showcasing forecasting, analytics, and ML pipelines across industries.">
+  <meta property="og:description" content="Showcasing AI, ML, and Financial Analytics projects with visual dashboards and modeling work.">
   <meta property="og:image" content="https://niikss.github.io/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="profile.jpg" type="image/jpeg">
+
+  <!-- Title -->
+  <title>Nikhil Gokhale | Portfolio</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Particles.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 2, direction: "none", out_mode: "out" }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 4 }
+          }
+        },
+        retina_detect: true
+      });
+
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        reset: false
+      });
+    });
+  </script>
+  <style>
+    .invisible {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
+  <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+
   <nav class="top-nav">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -20,14 +84,14 @@
     <a href="resume.pdf" target="_blank">Resume</a>
   </nav>
 
-  <header class="hero-section">
-    <div class="hero-content">
+  <header class="hero-section reveal">
+    <div class="hero-content glass">
       <div class="hero-image">
         <img src="profile.jpg" alt="Nikhil Gokhale" class="profile-img-circle" />
       </div>
       <div class="hero-info">
         <h1>Nikhil Gokhale</h1>
-        <p>Data Scientist | ML Developer | Data Analyst</p>
+        <p>Data Scientist | ML Developer | Financial Analytics</p>
         <ul class="highlights">
           <li>✨ Built 10+ dashboards, boosting finance visibility by 35%</li>
           <li>✨ Reduced prep time by 40% via Python-SQL automation</li>
@@ -42,37 +106,37 @@
     </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="reveal glass">
     <h2>About Me</h2>
     <p>I’m currently pursuing my Master’s in Data Science at the University at Buffalo. With a background in Electronics and Telecommunications and hands-on experience in the tech industry, I bring a balanced blend of analytical rigor and practical implementation. My work centers around scalable solutions — whether it's deploying Spark ML pipelines, automating ETL flows with Python-SQL, or visualizing insights through dashboards.</p>
     <p>I'm passionate about applying data science to real-world business challenges, especially in the domains of finance and forecasting. I’ve built solutions that improved decision cycles, enhanced reporting accuracy, and automated critical processes. I thrive in collaborative environments and am always eager to innovate using the latest in AI, cloud, and data tooling.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
-    <div class="project-card">
+    <div class="project-card glass">
       <h3>Financial Risk Forecasting</h3>
       <p>Built logistic and decision tree models to predict risk across 1K+ loan accounts. Delivered dashboards for executives to monitor credit utilization and default ratios.</p>
       <p><strong>Tech:</strong> Python, Flask, Streamlit</p>
     </div>
-    <div class="project-card">
+    <div class="project-card glass">
       <h3>Biological Age Predictor</h3>
       <p>Processed 250K+ records to estimate biological age using Spark ML. Improved accuracy and runtime by 40% using ElasticNet and Random Forest.</p>
       <p><strong>Tech:</strong> PySpark, ElasticNet</p>
     </div>
-    <div class="project-card">
+    <div class="project-card glass">
       <h3>Customer Segmentation Engine</h3>
       <p>Generated 8 personas via UMAP and PCA, improving recommendations by 30% with TensorFlow models.</p>
       <p><strong>Tech:</strong> Python, AWS, TensorFlow</p>
     </div>
-    <div class="project-card">
+    <div class="project-card glass">
       <h3>Socioeconomic Health Analytics</h3>
       <p>Correlated financial access with health outcomes using PostgreSQL + Tableau, revealing insights across 5 regional clusters.</p>
       <p><strong>Tech:</strong> SQL, Tableau</p>
     </div>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="reveal">
     <h2>Experience</h2>
     <h3>Junior Data Scientist – Maxgen Technologies</h3>
     <p>Jul 2023 – Jan 2024</p>
@@ -85,7 +149,7 @@
     </ul>
   </section>
 
-  <section id="certifications">
+  <section id="certifications" class="reveal">
     <h2>Certifications & Research</h2>
     <ul>
       <li>DeepLearning.AI Supervised ML (In Progress)</li>
@@ -96,7 +160,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 NikhilGokhale | Built with 💻 and ☕</p>
+    <p class="footer-animated">&copy; 2025 Nikhil Gokhale | Built with 💻 and ☕</p>
   </footer>
 </body>
 </html>
