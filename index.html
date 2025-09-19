@@ -21,7 +21,7 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Particles.js Script -->
+  <!-- Particles.js + ScrollReveal -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -39,38 +39,20 @@
         },
         interactivity: {
           detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" }
-          },
-          modes: {
-            repulse: { distance: 100, duration: 0.4 },
-            push: { particles_nb: 4 }
-          }
+          events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+          modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
         },
         retina_detect: true
       });
 
       ScrollReveal().reveal('.reveal', {
-        delay: 200,
-        distance: '50px',
-        duration: 1000,
-        easing: 'ease-in-out',
-        origin: 'bottom',
-        reset: false
+        delay: 200, distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'bottom', reset: false
       });
     });
   </script>
   <style>
-    .invisible {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .invisible { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
@@ -93,9 +75,12 @@
         <h1>Nikhil Gokhale</h1>
         <p>Data Scientist | ML Developer | Data Analyst</p>
         <ul class="highlights">
-          <li>✨ Built 10+ dashboards, boosting finance visibility by 35%</li>
-          <li>✨ Reduced prep time by 40% via Python-SQL automation</li>
-          <li>✨ Scaled Spark ML pipelines processing 250K+ records</li>
+          <li>✨ Built 10+ BI dashboards, improving reporting efficiency by 35%</li>
+          <li>✨ Automated Python–SQL ETL workflows, cutting prep time by 40%</li>
+          <li>✨ Cleaned and transformed 120K+ records, boosting data accuracy by 20%</li>
+          <li>✨ Scaled Spark ML pipelines to process 250K+ records with 40% faster runtime</li>
+          <li>✨ Analyzed 5K+ sales/finance records, improving forecasting accuracy by 15%</li>
+
         </ul>
         <div class="center-buttons">
           <a href="mailto:nikhilgokhale2232001@gmail.com">Contact</a>
@@ -106,51 +91,84 @@
     </div>
   </header>
 
+  <!-- UPDATED SUMMARY (reflects 3+ years) -->
   <section id="about" class="reveal glass">
     <h2>About Me</h2>
-    <p>I’m currently pursuing my Master’s in Data Science at the University at Buffalo. With a background in Electronics and Telecommunications and hands-on experience in the tech industry, I bring a balanced blend of analytical rigor and practical implementation. My work centers around scalable solutions — whether it's deploying Spark ML pipelines, automating ETL flows with Python-SQL, or visualizing insights through dashboards.</p>
-    <p>I'm passionate about applying data science to real-world business challenges, especially in the domains of finance and forecasting. I’ve built solutions that improved decision cycles, enhanced reporting accuracy, and automated critical processes. I thrive in collaborative environments and am always eager to innovate using the latest in AI, cloud, and data tooling.</p>
+    <p>I’m a Data Scientist with <strong>3+ years of experience</strong> building end-to-end solutions across analytics, machine learning, and data engineering. I focus on scalable pipelines, clear dashboards, and reliable APIs that move business metrics whether that’s accelerating reporting cycles, improving model accuracy, or reducing latency.</p>
+    <p>Recent work spans Spark ML for large-scale modeling, Python/SQL automation for ETL, and applied ML projects in finance, recommendation systems, and NLP. I love collaborating with cross-functional teams and turning complex data into decisions.</p>
   </section>
 
   <section id="projects" class="reveal">
     <h2>Projects</h2>
+
     <div class="project-card glass">
       <h3>Financial Risk Forecasting</h3>
       <p>Built logistic and decision tree models to predict risk across 1K+ loan accounts. Delivered dashboards for executives to monitor credit utilization and default ratios.</p>
       <p><strong>Tech:</strong> Python, Flask, Streamlit</p>
     </div>
+
     <div class="project-card glass">
       <h3>Biological Age Predictor</h3>
       <p>Processed 250K+ records to estimate biological age using Spark ML. Improved accuracy and runtime by 40% using ElasticNet and Random Forest.</p>
       <p><strong>Tech:</strong> PySpark, ElasticNet</p>
     </div>
+
     <div class="project-card glass">
       <h3>Customer Segmentation Engine</h3>
       <p>Generated 8 personas via UMAP and PCA, improving recommendations by 30% with TensorFlow models.</p>
       <p><strong>Tech:</strong> Python, AWS, TensorFlow</p>
     </div>
+
     <div class="project-card glass">
       <h3>Socioeconomic Health Analytics</h3>
       <p>Correlated financial access with health outcomes using PostgreSQL + Tableau, revealing insights across 5 regional clusters.</p>
       <p><strong>Tech:</strong> SQL, Tableau</p>
     </div>
+
+    <!-- NEW PROJECTS ADDED -->
+    <div class="project-card glass">
+      <h3>Music &amp; Entertainment Recommendation System</h3>
+      <p>Built a recommendation model on 100K+ records, simulating a 25% increase in engagement. Exposed predictions via a Flask API and reduced response latency by 40%.</p>
+      <p><strong>Tech:</strong> Python, TensorFlow, Flask</p>
+    </div>
+
+    <div class="project-card glass">
+      <h3>Toxic Comment Detection (LLM/NLP)</h3>
+      <p>Fine-tuned a BERT model on 160K+ comments, improving accuracy by 12%. Shipped a Streamlit app with model toggle and confidence visualization for analyst usability.</p>
+      <p><strong>Tech:</strong> Python, Hugging Face, Streamlit</p>
+    </div>
   </section>
 
   <section id="experience" class="reveal">
     <h2>Experience</h2>
-    <h3>Junior Data Scientist – Maxgen Technologies</h3>
-    <p>Jul 2023 – Jan 2024</p>
+
+    <h3>Graduate Data Analyst — University at Buffalo</h3>
+    <p>Buffalo, NY • May 2024 – May 2025</p>
     <ul>
-      <li>Developed 10+ BI dashboards; improved reporting cycles by 35%</li>
-      <li>Automated ETL workflows, cutting prep time by 40%</li>
-      <li>Resolved 100+ anomalies across finance/compliance flows</li>
-      <li>Built APIs for model metrics and real-time reporting</li>
-      <li>Coordinated KPI tracking with 5+ cross-functional teams</li>
+      <li>Cleaned and transformed 120K+ student/resource records, improving data accuracy by 20%.</li>
+      <li>Built 4 BI dashboards, reducing manual reporting time by 25% (10+ hours/week saved).</li>
+      <li>Partnered with faculty to deliver insights that informed program planning.</li>
+    </ul>
+
+    <h3>Junior Data Scientist — Maxgen Technologies Pvt. Ltd.</h3>
+    <p>Mumbai, India • Jul 2023 – Jan 2024</p>
+    <ul>
+      <li>Designed 10+ dashboards, improving reporting efficiency by 35% across teams.</li>
+      <li>Automated ETL pipelines with Python/SQL, cutting prep time by 40%.</li>
+      <li>Integrated analytics into workflows with cross-functional teams, increasing adoption by 30%.</li>
+    </ul>
+
+    <h3>Data Analyst — Essfour Engineering Pvt. Ltd.</h3>
+    <p>Surat, India • Jul 2022 – May 2023</p>
+    <ul>
+      <li>Analyzed 5K+ sales/finance records, improving forecasting accuracy by 15%.</li>
+      <li>Developed KPI dashboards for leadership, streamlining reporting by 20%.</li>
+      <li>Delivered ad-hoc analyses that reduced stakeholder turnaround time by 25%.</li>
     </ul>
   </section>
 
   <section id="certifications" class="reveal">
-    <h2>Certifications & Research</h2>
+    <h2>Certifications &amp; Research</h2>
     <ul>
       <li>DeepLearning.AI Supervised ML (In Progress)</li>
       <li>Google Analytics Certified (2021)</li>
